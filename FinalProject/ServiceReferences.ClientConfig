@@ -1,0 +1,16 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="connectionSoap" maxBufferSize="2147483647" maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="../connection.asmx" binding="basicHttpBinding"
+                bindingConfiguration="connectionSoap" contract="connection.connectionSoap"
+                name="connectionSoap" />
+        </client>
+    </system.serviceModel>
+</configuration>

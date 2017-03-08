@@ -3,7 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="test1.MainPage"
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="FinalProject.MainPage"
     mc:Ignorable="d"
     d:DesignWidth="1024" d:DesignHeight="768">
 
@@ -42,8 +42,13 @@
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
+
+        <Rectangle Grid.ColumnSpan="12" Grid.Column="0" Fill="#FFF4F4F5" 
+                   Grid.Row="0" Grid.RowSpan="2" Stroke="Black" 
+                   />
+
         <Button Background="Yellow" Grid.Column="1" Grid.ColumnSpan="2" FontSize="30" 
-                FontWeight="Bold" BorderThickness="3" Grid.Row="1">
+                FontWeight="Bold" BorderThickness="3" Grid.Row="3">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="3" Color="White"/>
             </Button.Effect>
@@ -59,7 +64,7 @@
         </Button>
 
         <Button Background="Yellow" FontSize="30" 
-                FontWeight="Bold" BorderThickness="3" Grid.Row="1" Grid.Column="5" Grid.ColumnSpan="2">
+                FontWeight="Bold" BorderThickness="3" Grid.Row="3" Grid.Column="5" Grid.ColumnSpan="2">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="3" Color="White"/>
             </Button.Effect>
@@ -75,7 +80,7 @@
         </Button>
 
         <Button Background="Yellow" FontSize="30" 
-                FontWeight="Bold" BorderThickness="3" Grid.Row="1" Grid.Column="9" Grid.ColumnSpan="2">
+                FontWeight="Bold" BorderThickness="3" Grid.Row="3" Grid.Column="9" Grid.ColumnSpan="2">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="3" Color="White"/>
             </Button.Effect>
