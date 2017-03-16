@@ -42,57 +42,34 @@
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
+        <HyperlinkButton Content="Home" 
+            Height="19" HorizontalAlignment="Left" 
+            Margin="12,12,0,0" Name="hlHome" 
+            VerticalAlignment="Top" Width="39" Click="hlHome_Click" />
+        <Path Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="12" Stroke="Red" StrokeThickness="2" Stretch="Fill" VerticalAlignment="Top">
+            <Path.Data>
+                <LineGeometry StartPoint="0,0" EndPoint="1,0" />
+            </Path.Data>
+        </Path>
 
-        <Rectangle Grid.ColumnSpan="12" Grid.Column="0" Fill="#FFF4F4F5" 
-                   Grid.Row="0" Grid.RowSpan="2" Stroke="Black" 
-                   />
+        <sdk:TabControl x:Name="tabControl" Grid.Row="2" Grid.RowSpan="9" Grid.Column="1" Grid.ColumnSpan="10">
+            <sdk:TabControl.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFF02222" Offset="1"/>
+                </LinearGradientBrush>
+            </sdk:TabControl.Background>
+            <sdk:TabItem Header="ข่าว">
+                <Grid Background="#FFACE611">
 
-        <Button Background="Yellow" Grid.Column="1" Grid.ColumnSpan="2" FontSize="30" 
-                FontWeight="Bold" BorderThickness="3" Grid.Row="3">
-            <Button.Effect>
-                <DropShadowEffect BlurRadius="3" Color="White"/>
-            </Button.Effect>
-            <Viewbox>
-                <TextBlock>
-                    <TextBlock.Foreground>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="Black" Offset="0"/>
-                            <GradientStop Color="Red" Offset="1"/>
-                        </LinearGradientBrush>
-                    </TextBlock.Foreground>ข่าวชาวIT</TextBlock>
-            </Viewbox>
-        </Button>
-
-        <Button Background="Yellow" FontSize="30" 
-                FontWeight="Bold" BorderThickness="3" Grid.Row="3" Grid.Column="5" Grid.ColumnSpan="2">
-            <Button.Effect>
-                <DropShadowEffect BlurRadius="3" Color="White"/>
-            </Button.Effect>
-            <Viewbox>
-                <TextBlock>
-                    <TextBlock.Foreground>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="Black" Offset="0"/>
-                            <GradientStop Color="Red" Offset="1"/>
-                        </LinearGradientBrush>
-                    </TextBlock.Foreground>บทความ</TextBlock>
-            </Viewbox>
-        </Button>
-
-        <Button Background="Yellow" FontSize="30" 
-                FontWeight="Bold" BorderThickness="3" Grid.Row="3" Grid.Column="9" Grid.ColumnSpan="2">
-            <Button.Effect>
-                <DropShadowEffect BlurRadius="3" Color="White"/>
-            </Button.Effect>
-            <Viewbox>
-                <TextBlock>
-                    <TextBlock.Foreground>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="Black" Offset="0"/>
-                            <GradientStop Color="Red" Offset="1"/>
-                        </LinearGradientBrush>
-                    </TextBlock.Foreground>บทความ</TextBlock>
-            </Viewbox>
-        </Button>
+                </Grid>
+            </sdk:TabItem>
+            <sdk:TabItem Header="บทความ">
+                <Grid Background="#FF09949B"/>
+            </sdk:TabItem>
+            <sdk:TabItem Header="ปัญหา">
+                <Grid Background="#FFC96666"/>
+            </sdk:TabItem>
+        </sdk:TabControl>
     </Grid>
 </UserControl>

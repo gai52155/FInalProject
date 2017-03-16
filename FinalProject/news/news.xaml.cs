@@ -9,18 +9,21 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using System.Windows.Navigation;
 
-namespace FinalProject
+namespace FinalProject.news
 {
-    public partial class MainPage : UserControl
+    public partial class news : Page
     {
-        public MainPage()
+        public news()
         {
             InitializeComponent();
-            private void hlHome_Click(object sender, RoutedEventArgs e)
-        {
-            this.frameContainer.Navigate(new Uri("/View/Home.xaml", UriKind.Relative));
         }
-    }
+
+        // Executes when the user navigates to this page.
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+        }
+
     }
 }
