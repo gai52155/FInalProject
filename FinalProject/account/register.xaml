@@ -1,0 +1,76 @@
+﻿<navigation:Page xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"  x:Class="FinalProject.account.register" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="640" d:DesignHeight="480"
+           Title="register Page">
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <SolidColorBrush Color="#F9FFFFFF" Opacity="0.6"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+        <sdk:Label Grid.Row="0" Grid.RowSpan="2" Grid.Column="4" Grid.ColumnSpan="4" 
+        HorizontalContentAlignment="Center" Content="สมัครสมาชิก" FontSize="20" />
+
+        <sdk:Label Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="3" 
+                   Content="Username : " HorizontalContentAlignment="Left" FontSize="15"/>
+        <TextBox x:Name="usernameTxt"  Grid.Row="2" Grid.Column="6" Grid.ColumnSpan="4" Background="#FFFFF2F2"
+                 FontSize="15" Text="{Binding Username, Mode=TwoWay, ValidatesOnExceptions=True}"/>
+
+        <sdk:Label Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="3" 
+                   Content="Password  : " HorizontalContentAlignment="Left" FontSize="15"/>
+        <TextBox x:Name="passwordTxt" Grid.Row="4" Grid.Column="6" Grid.ColumnSpan="4" Background="#FFFFF2F2"
+                 FontSize="15" Text="{Binding Password, Mode=TwoWay, ValidatesOnExceptions=True}"/>
+
+        <sdk:Label Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="3"
+                   Content="rePassword : " HorizontalContentAlignment="Left" FontSize="15"/>
+        <TextBox x:Name="repasswordTxt" Grid.Row="6" Grid.Column="6" Grid.ColumnSpan="4" Background="#FFFFF2F2"
+                 FontSize="15" Text="{Binding Repassword, Mode=TwoWay, ValidatesOnExceptions=True}"/>
+
+        <sdk:Label Grid.Row="8" Grid.Column="3" Grid.ColumnSpan="3" 
+                   Content="E - mail : " HorizontalContentAlignment="Left" FontSize="15"/>
+        <TextBox x:Name="mailTxt" Grid.Row="8" Grid.Column="6" Grid.ColumnSpan="4" Background="#FFFFF2F2"
+                 FontSize="15" Text="{Binding Mail, Mode=TwoWay, ValidatesOnExceptions=True}"/>
+        
+        <sdk:Label Grid.Row="10" Grid.Column="3" Grid.ColumnSpan="3" x:Name="labelRnd"
+                   Content="รหัสสุ่ม: " HorizontalContentAlignment="Left" FontSize="15"/>
+        <TextBox x:Name="randTxt" Grid.Row="10" Grid.Column="6" Grid.ColumnSpan="3" Background="#FFFFF2F2"
+                 FontSize="15" Text="{Binding Capcha, Mode=TwoWay, ValidatesOnExceptions=True}"/>
+        
+        <Button Name="submitBtn" Grid.Row="12" Grid.Column="4" Grid.ColumnSpan="4" FontSize="15" 
+                Content="สมัครสมาชิก" Click="submitBtn_Click"/>
+    </Grid>
+</navigation:Page>

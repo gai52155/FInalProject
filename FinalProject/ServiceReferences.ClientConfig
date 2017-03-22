@@ -5,12 +5,18 @@
                 <binding name="connectionSoap" maxBufferSize="2147483647" maxReceivedMessageSize="2147483647">
                     <security mode="None" />
                 </binding>
+                <binding name="connectionSoap1" maxBufferSize="2147483647" maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
             </basicHttpBinding>
         </bindings>
         <client>
             <endpoint address="../connection.asmx" binding="basicHttpBinding"
                 bindingConfiguration="connectionSoap" contract="connection.connectionSoap"
                 name="connectionSoap" />
+            <endpoint address="../connection.asmx" binding="basicHttpBinding"
+                bindingConfiguration="connectionSoap1" contract="MySQL.connectionSoap"
+                name="connectionSoap1" />
         </client>
     </system.serviceModel>
 </configuration>

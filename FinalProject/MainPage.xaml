@@ -3,6 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
     xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="FinalProject.MainPage"
     mc:Ignorable="d"
     d:DesignWidth="1024" d:DesignHeight="768">
@@ -42,34 +43,21 @@
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
-        <HyperlinkButton Content="Home" 
-            Height="19" HorizontalAlignment="Left" 
-            Margin="12,12,0,0" Name="hlHome" 
-            VerticalAlignment="Top" Width="39" Click="hlHome_Click" />
+        <Button Click="changeNavBtn" Tag="/index/index.xaml" Content="หน้าหลัก" Grid.Column="0" Background="Red"/>
+        <Button Click="changeNavBtn" Tag="/news/news.xaml" Content="ข่าว" Grid.Column="1" Background="#FF17FF00"/>
+        <Button Click="changeNavBtn" Tag="/articles/articles.xaml" Content="บทความ" Grid.Column="2" Background="#FFFF00E8"/>
+        <Button Click="changeNavBtn" Tag="/problems/problems.xaml" Content="ปัญหา" Grid.Column="3" Background="#FF00AEFF"/>
+        <Button Click="changeNavBtn" Tag="/admin/management.xaml" Content="จัดการระบบ" Grid.Column="4" Background="Black"/>
+
+        <Button Click="changeNavBtn" Tag="/account/login.xaml" Content="เข้าสู่ระบบ" Grid.Column="11" Background="#FFFFAE00" />
+        <Button Click="changeNavBtn" Tag="/account/register.xaml" Content="สมัครสมาชิก" Grid.Column="10" Background="#FF97FF00" />
+
         <Path Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="12" Stroke="Red" StrokeThickness="2" Stretch="Fill" VerticalAlignment="Top">
             <Path.Data>
                 <LineGeometry StartPoint="0,0" EndPoint="1,0" />
             </Path.Data>
         </Path>
-
-        <sdk:TabControl x:Name="tabControl" Grid.Row="2" Grid.RowSpan="9" Grid.Column="1" Grid.ColumnSpan="10">
-            <sdk:TabControl.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="White" Offset="0"/>
-                    <GradientStop Color="#FFF02222" Offset="1"/>
-                </LinearGradientBrush>
-            </sdk:TabControl.Background>
-            <sdk:TabItem Header="ข่าว">
-                <Grid Background="#FFACE611">
-
-                </Grid>
-            </sdk:TabItem>
-            <sdk:TabItem Header="บทความ">
-                <Grid Background="#FF09949B"/>
-            </sdk:TabItem>
-            <sdk:TabItem Header="ปัญหา">
-                <Grid Background="#FFC96666"/>
-            </sdk:TabItem>
-        </sdk:TabControl>
+        <navigation:Frame Grid.Row="1" Grid.RowSpan="11" Grid.ColumnSpan="12" x:Name="navFrame" 
+                          HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Source="/index/index.xaml" Margin="10" />
     </Grid>
 </UserControl>

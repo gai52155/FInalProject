@@ -9,21 +9,21 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using System.Windows.Navigation;
 
-namespace FinalProject
+namespace FinalProject.admin
 {
-    public partial class MainPage : UserControl
+    public partial class managemant_problems : Page
     {
-        public MainPage()
+        public managemant_problems()
         {
             InitializeComponent();
-    }
-        private void changeNavBtn(object sender, RoutedEventArgs e)
-        {
-            Button theButton = sender as Button;
-            string url = theButton.Tag.ToString();
-
-            this.navFrame.Navigate(new Uri(url, UriKind.Relative));
         }
+
+        // Executes when the user navigates to this page.
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+        }
+
     }
 }
