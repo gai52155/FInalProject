@@ -9,10 +9,10 @@ namespace FinalProject.Web
     [System.ComponentModel.ToolboxItem(false)]
     public class connection : System.Web.Services.WebService
     {
-        string constr = "server=localhost;user=root;pwd=12345;database=register;";
+        string constr = "server=127.0.0.1;port=3307;user=root;pwd=12345;database=register;";
 
         [WebMethod]
-        public string ExecuteScalar(string sql)
+        public string ExecuteScalar(string sql) //This method is simple. Get a single object from MySQL. (SELECT)
         {
             try
             {
@@ -37,7 +37,7 @@ namespace FinalProject.Web
         }
 
         [WebMethod]
-        public string ExecuteNonQuery(string sql)
+        public string ExecuteNonQuery(string sql) //For single SQL execution. Example of SQL type: INSERT, UPDATE, DELETE.
         {
             try
             {

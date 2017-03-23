@@ -189,14 +189,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AppManifest.xml" />
-    <None Include="Service References\MySQL\connection.wsdl" />
+    <None Include="Service References\MySQL\connection.disco" />
+    <None Include="Service References\MySQL\configuration91.svcinfo" />
+    <None Include="Service References\MySQL\configuration.svcinfo" />
     <None Include="Service References\MySQL\FinalProject.MySQL.ExecuteNonQueryResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\MySQL\FinalProject.MySQL.ExecuteScalarResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\MySQL\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="ServiceReferences.ClientConfig" />
+    <None Include="Service References\MySQL\connection.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -210,21 +217,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\MySQL\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\MySQL\connection.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\MySQL\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\MySQL\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\MySQL\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

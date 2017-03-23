@@ -47,7 +47,6 @@
         <Button Click="changeNavBtn" Tag="/news/news.xaml" Content="ข่าว" Grid.Column="1" Background="#FF17FF00"/>
         <Button Click="changeNavBtn" Tag="/articles/articles.xaml" Content="บทความ" Grid.Column="2" Background="#FFFF00E8"/>
         <Button Click="changeNavBtn" Tag="/problems/problems.xaml" Content="ปัญหา" Grid.Column="3" Background="#FF00AEFF"/>
-        <Button Click="changeNavBtn" Tag="/admin/management.xaml" Content="จัดการระบบ" Grid.Column="4" Background="Black"/>
 
         <Button Click="changeNavBtn" Tag="/account/login.xaml" Content="เข้าสู่ระบบ" Grid.Column="11" Background="#FFFFAE00" />
         <Button Click="changeNavBtn" Tag="/account/register.xaml" Content="สมัครสมาชิก" Grid.Column="10" Background="#FF97FF00" />

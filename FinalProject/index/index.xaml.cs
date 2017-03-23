@@ -15,9 +15,24 @@ namespace FinalProject.index
 {
     public partial class index : Page
     {
+        MySQL.connectionSoapClient myService;
         public index()
         {
             InitializeComponent();
+
+            myService = new MySQL.connectionSoapClient();
+            myService.ExecuteScalarCompleted += Myservice_ExecuteScalarCompleted;
+            myService.ExecuteNonQueryCompleted += Myservice_ExecuteNonQueryCompleted;
+        }
+
+        void Myservice_ExecuteNonQueryCompleted(object sender, MySQL.ExecuteNonQueryCompletedEventArgs e)
+        {
+            MessageBox.Show(e.Result);
+        }
+
+        void Myservice_ExecuteScalarCompleted(object sender, MySQL.ExecuteScalarCompletedEventArgs e)
+        {
+            MessageBox.Show(e.Result);
         }
 
         // Executes when the user navigates to this page.
@@ -25,5 +40,14 @@ namespace FinalProject.index
         {
         }
 
+        private void esBtn_Click(object sender, RoutedEventArgs e)
+        {
+            myService.ExecuteScalarAsync(textBox1.Text);
+        }
+
+        private void enqBtn_Click(object sender, RoutedEventArgs e)
+        {
+            myService.ExecuteNonQueryAsync(textBox1.Text);
+        }
     }
 }
